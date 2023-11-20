@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-bs-theme="auto">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>&#8211; شركة العاصمة</title>
+    <meta name="description" content="شركة العاصمة">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@200;200;300;400;500&family=Open+Sans:ital,wght@0,700;0,800;2,400;2,500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./stylear.css">
+
+
+    <!-- Page loading styles-->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+
+        .dark-mode .page-loading {
+            background-color: #121519;
+        }
+
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+
+        .page-loading-inner>span {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #6f788b;
+        }
+
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: .6;
+        }
+
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            background-color: #d7dde2;
+            border-radius: 50%;
+            opacity: 0;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+
+        .dark-mode .page-spinner {
+            background-color: rgba(255, 255, 255, .25);
+        }
+
+        @-webkit-keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1500);
+            };
+        })();
+
+    </script>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WKV3GT5');
+    </script>
+    <meta name="theme-color" content="#712cf9">
+
+</head>
+
+<body data-bs-theme="light">
+
+    <!-- <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0"
+            style="display: none; visibility: hidden;"></iframe>
+    </noscript> -->
+    <!-- Page loading spinner-->
+    <!-- <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div> -->
+
+
+
+    <header class="">
+        <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top z-2">
+            <div class="container-xxl">
+                <a class="navbar-brand fw-bold" href="./homear.html">
+                    <img src="./img/Un-1.png" alt="icon img/Un-1.png" style="width: 150px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ps-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link  pe-lg-5    COLOR2" aria-current="page" href="./homear.html"> الرئيسية
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link   pe-lg-3  COLOR2" aria-current="page" href="./aboutar.html">من نحن </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle    pe-lg-3  COLOR2" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                خدماتنا
+                            </a>
+                            <ul class="dropdown-menu" data-bs-theme="light">
+                                <li><a class="dropdown-item COLOR2  pe-md-3  " href="./turinger.html"> قسم الخراطة</a>
+                                </li>
+                                <li><a class="dropdown-item COLOR2 pe-md-3 " href="./heavyar.html"> خراطة المعدات
+                                        الثقيل</a>
+                                </li>
+                                <li><a class="dropdown-item COLOR2  pe-md-3" href="./pumpsar.html">قسم الطلمبات</a></li>
+                                <li><a class="dropdown-item COLOR2  pe-md-3 " href="./weldingar.html"> قسم اللحام </a>
+                                </li>
+
+                                <li><a class="dropdown-item COLOR2  pe-md-3 " href="./manufactar.html">قسم التصنيع</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link   pe-lg-3   COLOR2 " aria-current="page" href="./customerar.html">عملائنا
+                            </a>
+                        </li>
+                    </ul>
+
+                    <form class="" role="search">
+                        <a href="./home.html" type="button" class="btn px-0">
+                            <img src="./img/uk_4628638.png" alt="img/uk_4628638.png" style="width: 25px;">
+                        </a>
+                        <a href="./homear.html" type="button" class="btn px-0">
+                            <img src="./img/saudi-arabia_5111777.png" alt="img/uk_4628638.png" style="width: 25px;">
+                        </a>
+                        <a type="button" href="./contact.html"
+                            class="btn btn-outline-secondary pt-1 fw-semibold  rounded-5">
+                            contact
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+
+    <section class="bg-dark position-relative py-5">
+        <div class="d-none d-dark-mode-block position-absolute top-0 start-0 w-100 h-100"
+            style="background-color: rgba(255,255,255, .02);"></div>
+        <div class="container dark-mode position-relative zindex-2 py-5 mb-4 mb-sm-5">
+            <div class="row pb-5 mb-2 mb-sm-0 mb-lg-3">
+                <div class="col-lg-10 col-xl-10 ">
+                    <h1 class="fw-bold Display-4 text-white pb-3 pb-sm-3 ">نحن نؤمن بشدة بنجاح لكل
+                        الأعمال</h1>
+                    <ul class="list-unstyled d-flex flex-wrap mb-0 ms-0">
+                        <li class="d-flex ps-3 pt-3   text-light "><i style="font-size:20px" class="fa">&#xf046;</i>
+                            التنبؤ و
+                            التوصيات</li>
+                        <li class="d-flex px-3 pt-3  text-light"><i style="font-size:20px" class="fa">&#xf046;</i>
+                            تعريف
+                            الأنماط والتحليل</li>
+                        <li class="d-flex px-3 pt-3   text-light "><i style="font-size:20px" class="fa">&#xf046;</i>
+                            التقسيم حسب
+                            طرق مختلفة</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="container position-relative z-1" style="margin-top: -95px;">
+        <div class="rounded-5 overflow-hidden" style="min-height: 400px;max-height: 500px;">
+            <div class="jarallax ratio ratio-21x9" data-jarallax data-speed="0.6">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+                <div class="jarallax-img" style="background-image: url(./img/photo-1564182999211-0992ff88172a.avif);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- About-->
+    <section class="container position-relative z-1">
+
+        <div class="row  pt-0 pt-md-3 pt-xxl-2">
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="fs-sm text-uppercase fw-semibold h5 mb-3">ما نقوم به</div>
+                <h2 class="display-6 fw-semibold">نحن فريق يقوم بوضع استراتيجيات التسويق</h2>
+            </div>
+            <div class="col-12 col-md-6 col-xl-5 offset-lg-1 offset-xl-2 pt-1 ">
+                <p class="fs-xl h5 fw-semibold text-black-50">
+                    تتخصص ورشتنا للمعدات الثقيلة في إعادة بناء وتعديل وإصلاح المعدات الثقيلة (معدات البناء، كسارات
+                    الصخور، معدات صيانة السكك الحديدية، براميل ونش، رافعات Pettibone، إلخ). وتقدم خدماتنا لكافة أنواع
+                    الآلآت الصغيرة والكبيرة بما في ذلك عمل المخرطة الأفقية والمخرطة العمودية (VTL) ، مطحنة الحفر الأفقية
+                    (HBM). ونقوم أيضًا بإصلاح مكونات آلات الإنتاج في المصانع (المروحيات ، آلات التقطيع ، المكابس ، مكبس
+                    التثقيب ، القولبة بالحقن ، مكبس الضغط ، أقفال الهواء ، دوارات المدخل / المخرج ، مضخات التفريغ ، علب
+                    التروس ، المكونات الهيدروليكية ، إلخ). ولدينا ورشة ماكينات واسعة النطاق لتصنيع قطع الغيار وفقا
+                    للحاجة.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="container py-2 my-lg-2 my-xl-2 my-xxl-3">
+        <div class="row pt-2 py-md-2">
+            <div class="col-lg-10 col-xl-9">
+                <h1 class="display-6 fw-semibold  text-uppercase  text-black z-2 pb-sm-2 pb-md-3">
+                    مجمع العاصمة
+                </h1>
+                <p class="lead text-black-50 pb-md-2 fw-semibold pb-lg-3 mb-2">تتمثل رؤية المؤسسة في مواصلة التحسين من
+                    خلال
+                    توفير معدات عالية التقنية بأجزاء مناسبة لعصر التكنولوجيا. يتم تنفيذ ذلك من قبل فريق من المهندسين
+                    والفنيين المدربين تدريباً عالياً وذو خبرة واسعة في هذا المجال. الغرض المحدد لمؤسسة العاصمة ولا يزال
+                    هو مساعدة عملائنا على استئناف تشغيل أعمالها لتحقيق السلاسة واستمرارية إنتاجها التشغيل بسلاسة وفي
+                    أسرع وقت ممكن، حيث نتولى القيادة الكاملة لأي مشكلة تم الإبلاغ عنها بمعدات العملاء. اتصل الآن على
+                    5921176-013 وشاهد كيف يمكن أن تعمل شركة العاصمة من أجلك! </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <br />
+    <section class="container-xxl text-center">
+        <h1 class="text-start pt-2 pb-md-4 text-black text-end">المنهج الاحترافي</h1>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card border-0 bg-secondary py-3  rounded-5 shadow-sm">
+                    <div class="card-body ">
+                        <h4 class="card-title pb-2 px-md-3"> مجمع العاصمة </h4>
+                        <p class="card-text text-secondary fw-semibold px-md-3"> مجمع العاصمة ، عبارة عن ورشة أعمال
+                            هندسية وكذلك ورشة سيارات للخراطة وقطع غيار السيارات ومضخات حقن الوقود الهيدروليكي والديزل.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 bg-secondary py-3  rounded-5 shadow-sm">
+                    <div class="card-body ">
+                        <h4 class="card-title pb-2 px-md-3"> مجمع العاصمة </h4>
+                        <p class="card-text text-secondary fw-semibold px-md-3"> مجمع العاصمة ، عبارة عن ورشة أعمال
+                            هندسية وكذلك ورشة سيارات للخراطة وقطع غيار السيارات ومضخات حقن الوقود الهيدروليكي والديزل.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+
+                <div class="card border-0 bg-secondary py-3  rounded-5 shadow-sm">
+                    <div class="card-body ">
+                        <h4 class="card-title pb-2 px-md-3">مجمع العاصمة </h4>
+                        <p class="card-text text-secondary fw-semibold px-md-3"> مجمع العاصمة ، عبارة عن ورشة أعمال
+                            هندسية وكذلك ورشة سيارات للخراطة وقطع غيار السيارات ومضخات حقن الوقود الهيدروليكي والديزل.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <!--=============================-->
+    <!--=   carouselExampleAutoplaying      carouselExampleAutoplaying        =-->
+    <!--=============================-->
+    <section class="object-fit-cover overflow-hidden">
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-jarallax data-type="scroll-opacity" data-speed="0.7">
+                    <img src="./img/premium_photo-1661963130783-230270d66f76.avif" alt="" width="100%" height="480px"
+                        class=" object-fit-cover" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                        focusable="false">
+                    <div class="container">
+                        <div class="carousel-caption text-end   position-absolute top-0 ">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <h1 class="text-danger">ورشة العاصمة</h1>
+                            <p class=" fw-semibold ">العاصمة توفر خدمات التصنيع واللحام والميكانيكية والهيدروليكية،
+                                ويشمل عملنا خدمات الإصلاح،<br> بالإضافة إلى التصنيع حسب الطلب، أوتصنيع المكونات الجديدة.
+                                فنحن قادرون على التعامل مع المؤسسات <br>والشركات الصناعية الكبيرة التي تحتاج إلى خدماتنا
+                                المتنوعة، </p>
+                            <p><a class="btn  btn-outline-light fw-semibold" href="./aboutar.html">استكشف المزيد</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item" data-jarallax data-type="scroll-opacity" data-speed="0.7">
+                    <img src="./img/photo-1429772011165-0c2e054367b8.avif" alt="" width="100%" height="480px"
+                        class=" object-fit-cover" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                        focusable="false">
+                    <div class="container">
+                        <div class="carousel-caption text-end   position-absolute top-0 ">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <h1 class="text-danger">ورشة العاصمة</h1>
+                            <p class=" fw-semibold ">العاصمة توفر خدمات التصنيع واللحام والميكانيكية والهيدروليكية،
+                                ويشمل عملنا خدمات الإصلاح،<br> بالإضافة إلى التصنيع حسب الطلب، أوتصنيع المكونات الجديدة.
+                                فنحن قادرون على التعامل مع المؤسسات <br>والشركات الصناعية الكبيرة التي تحتاج إلى خدماتنا
+                                المتنوعة، </p>
+                            <p><a class="btn  btn-outline-light fw-semibold" href="./heavyar.html">استكشف المزيد</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item" data-jarallax data-type="scroll-opacity" data-speed="0.7">
+                    <img src="./img/photo-1504917595217-d4dc5ebe6122.avif" alt="" width="100%" height="480px"
+                        class=" object-fit-cover" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                        focusable="false">
+                    <div class="container">
+                        <div class="carousel-caption text-end   position-absolute top-0 ">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <h1 class="text-danger">ورشة العاصمة</h1>
+                            <p class=" fw-semibold ">العاصمة توفر خدمات التصنيع واللحام والميكانيكية والهيدروليكية،
+                                ويشمل عملنا خدمات الإصلاح،<br> بالإضافة إلى التصنيع حسب الطلب، أوتصنيع المكونات الجديدة.
+                                فنحن قادرون على التعامل مع المؤسسات <br>والشركات الصناعية الكبيرة التي تحتاج إلى خدماتنا
+                                المتنوعة، </p>
+                            <p><a class="btn  btn-outline-light fw-semibold" href="./manufactar.html">استكشف المزيد</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-black rounded-circle " aria-hidden="true"
+                    style="height: 50px;width: 40px;"></span>
+                <span class="visually-hidden ">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon  bg-black rounded-circle" aria-hidden="true"
+                    style="height: 50px;width: 40px;"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+    <!--=============================-->
+    <!--=   carouselExampleAutoplaying      carouselExampleAutoplaying        =-->
+    <!--=============================-->
+    <br>
+    <br>
+
+
+    <br>
+    <section>
+        <div class="container-xl py-5" onscroll="move()">
+            <h3 class=" text-end text-danger fw-semibold">مستوى إنجاز العمل</h3>
+            <br>
+            <div class="progress" role="progressbar" aria-label="Animated  Danger  striped example" aria-valuenow="95"
+                aria-valuemin="0" aria-valuemax="100" style="height: 30px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated fw-semibold" style="width: 95%;">90%
+                </div>
+            </div>
+            <br>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <section class="text-center">
+        <div class="container-xl text-center py-md-5">
+
+            <div class="row   text-center ">
+
+                <div class="col-12 text-center mx-auto  col-md-3">
+                    <h5 class="text-black fw-semibold  text-md-end">المركز الرئيسي </h5>
+                    <h5 class="text-black fw-semibold text-md-end">- المنطقة الصناعية بالاحساء </h5>
+
+                    <ul class="nav flex-column  mx-0 px-0">
+                        <li class="nav-item mb-2 text-md-end"><a href="#" class="nav-link p-0 text-secondary ">- فرع
+                                ابقيق
+                                بالمنطقة الصناعية </a></li>
+                        <li class="nav-item mb-2 text-md-end "><a href="#"
+                                class="nav-link p-0 text-body-secondary opacity-75 fw-semibold">-info@alaasemh.com</a>
+                        </li>
+                        <li class="nav-item mb-2 text-md-end "><a href="#"
+                                class="nav-link p-0 text-body-secondary opacity-75 fw-semibold">-gm@alaasemh.com</a>
+                        </li>
+                        <li class="nav-item mb-2 text-md-end"><a href="#"
+                                class="nav-link p-0 text-body-secondary opacity-75 "><i style="font-size:18px"
+                                    class="fa fw-bold">&#xf095;</i> 0135930528</a>
+                        </li>
+                        <li class="nav-item mb-2  text-md-end"><a href="#"
+                                class="nav-link p-0 text-body-secondary  opacity-75"><i style="font-size:18px"
+                                    class="fa fw-bold">&#xf095;</i> 0135921176</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12   col-md-9 ">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.683902696939!2d49.47565437512143!3d25.415389422828977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e37a265c1b1a329%3A0xa5d8cbe47a9c87ff!2z2KfZhNmB2K3YtSDYp9mE2K_ZiNix2Yog2YTZhNiz2YrYp9ix2KfYqiDZiNin2YTZhdix2YPYqNin2KogLSBNb3RvciBWZWhpY2xlIFBlcmlvZGljIEluc3BlY3Rpb24!5e0!3m2!1sen!2seg!4v1698907051381!5m2!1sen!2seg"
+                        style="height: 300px;" allowfullscreen="" loading="lazy"
+                        class=" w-100 overflow-hidden object-fit-cover"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <section class=" py-1 bg-black">
+        <div class="container">
+            <footer class=" ">
+                <ul class="nav justify-content-sm-start pb-3 mt-3">
+                    <li class="nav-item"><a href="./homear.html" class="nav-link px-2 text-light">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item"><a href="./aboutar.html" class="nav-link px-2 text-light">نبذة عنا</a></li>
+                    <li class="nav-item"><a href="./manufactar.html" class="nav-link px-2 text-light">خدماتنا</a></li>
+                    <li class="nav-item"><a href="./customerar.html" class="nav-link px-2 text-light">عملاؤنا</a></li>
+                    <li class="nav-item"><a href="./contactar.html" class="nav-link px-2 text-light">جهة الاتصال</a>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="nav justify-content-start  ">
+                    <li class="nav-item"><a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size:24px" class="fa">&#xf16a;</i>
+                        </a></li>
+                    <li class="nav-item"><a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size:24px" class="fa">&#xf082;</i>
+
+                        </a></li>
+                    <li class="nav-item"><a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size:24px" class="fa">&#xf099;</i>
+                        </a></li>
+
+                </ul>
+                <p class="text-start text-light">&copy; 2023 Company, Inc</p>
+            </footer>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+
+    <!-- Jarallax JS: Optional video extension -->
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js"></script>
+    <script src="./bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+
+
+
+    </script>
+</body>
+
+</html>

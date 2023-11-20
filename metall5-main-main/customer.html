@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>&#8211; شركة العاصمة</title>
+        <meta name="description" content="شركة العاصمة">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" id="google-font" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Page loading styles-->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all 0.4s 0.2s ease-in-out;
+            transition: all 0.4s 0.2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+
+        .dark-mode .page-loading {
+            background-color: #121519;
+        }
+
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
+            opacity: 0;
+        }
+
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+
+        .page-loading-inner>span {
+            display: block;
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #6f788b;
+        }
+
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: 0.6;
+        }
+
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: 0.75rem;
+            vertical-align: text-bottom;
+            background-color: #d7dde2;
+            border-radius: 50%;
+            opacity: 0;
+            -webkit-animation: spinner 0.75s linear infinite;
+            animation: spinner 0.75s linear infinite;
+        }
+
+        .dark-mode .page-spinner {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        @-webkit-keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector(".page-loading");
+                preloader.classList.remove("active");
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1500);
+            };
+        })();
+    </script>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                "gtm.start": new Date().getTime(),
+                event: "gtm.js",
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-WKV3GT5");
+    </script>
+    <meta name="theme-color" content="#712cf9" />
+</head>
+
+<body>
+    <!-- <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0"
+            style="display: none; visibility: hidden;"></iframe>
+    </noscript> -->
+    <!-- Page loading spinner-->
+    <!-- <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div> -->
+    <header class="">
+        <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top z-2">
+            <div class="container-xxl">
+                <a class="navbar-brand fw-bold" href="./home.html">
+                    <img class="object-fit-cover " src="./img/Un-1.png" alt="icon img/Un-1.png"
+                        style="width: 150px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-xl-5">
+                        <li class="nav-item">
+                            <a class="nav-link ps-lg-5 COLOR1" aria-current="page" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-lg-3 COLOR1" aria-current="page" href="./aboutus.html">about us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle ps-lg-3 COLOR1" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Our services
+                            </a>
+                            <ul class="dropdown-menu" data-bs-theme="light">
+                                <li>
+                                    <a class="dropdown-item COLOR1 ps-md-3" href="./turing.html">Turning Department
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item COLOR1 ps-md-3" href="./heavy.html">Heavy Equipment
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item COLOR1 ps-md-3" href="./pumps.html">Pumps department
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item COLOR1 ps-md-3" href="./welding.html">Welding department
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item COLOR1 ps-md-3" href="./manfactu.html">Manufacturing
+                                        department</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-lg-3 COLOR1" aria-current="page" href="./customer.html">Our customers
+                            </a>
+                        </li>
+                    </ul>
+
+                    <form class="" role="search">
+                        <a href="./home.html" type="button" class="btn px-0">
+                            <img src="./img/uk_4628638.png" alt="img/uk_4628638.png" style="width: 25px;">
+                        </a>
+                        <a href="./homear.html" type="button" class="btn px-0">
+                            <img src="./img/saudi-arabia_5111777.png" alt="img/uk_4628638.png" style="width: 25px;">
+                        </a>
+                        <a type="button" href="./contact.html"
+                            class="btn btn-outline-secondary pt-1 fw-semibold  rounded-5">
+                            contact
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+    <!-- Page title + filters-->
+    <section class="container-xxl">
+        <div class="row align-items-center gy-2 mb-4 pb-1 pb-sm-2 pb-lg-3">
+            <div class="col-lg-5 py-2 ">
+                <h1 class="mb-lg-0 py-3 ps-5 fw-bold text-dark">Our customers list</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Image zoom effect on hover. Can be combined with other effects like content overlay and lift. -->
+    <!-- Image zoom effect on hover. Can be combined with other effects like content overlay and lift. -->
+    <div class="row row-cols-1 row-cols-md-2 g-4 container-xxl text-center mx-auto">
+        <div class="col">
+            <div class="card text-center border-0 shadow border-opacity-50">
+                <img src="./img/الخليج-الشرقي-العالمية-للمقاولات.png" class="card-img-top mx-auto IMGS "
+                    alt="img/الخليج-الشرقي-العالمية-للمقاولات.png" style="height: 200px;width: 330px;">
+                <div class="card-body">
+                    <h3 class="card-title text-dark">Capital Complex</h3>
+                    <p class="card-text text-black-50 fw-semibold">The vision of the organization is to continue
+                        improving by providing
+                        High-tech equipment with parts
+                        Suitable for the Age of Technology The specific purpose of the Capital Foundation continues to
+                        be to help our customers get back to running
+                        Its work to achieve smoothness and continuity of production</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center border-0 shadow border-opacity-50">
+                <img src="./img/مصنع-طابوق-البراهيم-300x232.jpg" class="card-img-top mx-auto IMGS "
+                    alt="img/الخليج-الشرقي-العالمية-للمقاولات.png" style="height: 200px;width: 330px;  ">
+         
+                    <div class="card-body">
+                        <h3 class="card-title text-dark">Capital Complex</h3>
+                        <p class="card-text text-black-50 fw-semibold">The vision of the organization is to continue
+                            improving by providing
+                            High-tech equipment with parts
+                            Suitable for the Age of Technology The specific purpose of the Capital Foundation continues to
+                            be to help our customers get back to running
+                            Its work to achieve smoothness and continuity of production</p>
+                    </div>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center border-0 shadow border-opacity-50">
+                <img src="./img/النعيم-للخرسانة.jpg" class="card-img-top mx-auto IMGS "
+                    alt="img/الخليج-الشرقي-العالمية-للمقاولات.png" style="height: 200px;width: 320px;">
+                    <div class="card-body">
+                        <h3 class="card-title text-dark">Capital Complex</h3>
+                        <p class="card-text text-black-50 fw-semibold">The vision of the organization is to continue
+                            improving by providing
+                            High-tech equipment with parts
+                            Suitable for the Age of Technology The specific purpose of the Capital Foundation continues to
+                            be to help our customers get back to running
+                            Its work to achieve smoothness and continuity of production</p>
+                    </div>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center border-0 shadow border-opacity-50">
+                <img src="./img/شركة-البرغش.png" class="card-img-top mx-auto  IMGS "
+                    alt="img/الخليج-الشرقي-العالمية-للمقاولات.png" style="height: 200px;width: 320px;">
+                    <div class="card-body">
+                        <h3 class="card-title text-dark">Capital Complex</h3>
+                        <p class="card-text text-black-50 fw-semibold">The vision of the organization is to continue
+                            improving by providing
+                            High-tech equipment with parts
+                            Suitable for the Age of Technology The specific purpose of the Capital Foundation continues to
+                            be to help our customers get back to running
+                            Its work to achieve smoothness and continuity of production</p>
+                    </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Link swiper slides to any content via binded-content -->
+    <!-- Link swiper slides to any content via binded-content -->
+    <br>
+    <br>
+    <br>
+    <section>
+        <div class="container px-4 py-3" id="featured-3">
+            <h2 class="pb-2 text-danger border-bottom">Our values</h2>
+            <div class="row g-4 py-2 row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <div
+                    class="feature col card border-0 card-hover h-100 text-decoration-none py-4 rounded-5 px-lg-4 card-cover">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#D92A00" class="bi bi-gem"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6l3-4zm11.386 3.785-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495 8 13.366l2.532-7.876-5.062.005zm-1.371-.999-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l5.113 6.817-2.192-6.82L1.5 5.5zm7.889 6.817 5.123-6.83-2.928.002-2.195 6.828z" />
+                        </svg>
+                    </div>
+
+                    <h4 class="text-shadow-1">One team</h4>
+                    <p class="opacity-75">
+                        Our work includes repair services, in addition to custom
+                        manufacturing team work.
+                    </p>
+                </div>
+
+                <div
+                    class="feature col card border-0 card-hover h-100 text-decoration-none py-4 rounded-5 px-lg-4 card-cover">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#D92A00" class="bi bi-gem"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6l3-4zm11.386 3.785-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495 8 13.366l2.532-7.876-5.062.005zm-1.371-.999-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l5.113 6.817-2.192-6.82L1.5 5.5zm7.889 6.817 5.123-6.83-2.928.002-2.195 6.828z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-shadow-1">Innovation</h4>
+                    <p class="opacity-75">
+                        Providing the best services and high quality products.
+                    </p>
+                </div>
+
+                <div
+                    class="feature col card border-0 card-hover h-100 text-decoration-none py-4 rounded-5 px-lg-4 card-cover">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#D92A00" class="bi bi-gem"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6l3-4zm11.386 3.785-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495 8 13.366l2.532-7.876-5.062.005zm-1.371-.999-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l5.113 6.817-2.192-6.82L1.5 5.5zm7.889 6.817 5.123-6.83-2.928.002-2.195 6.828z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-shadow-1">communication</h4>
+                    <p class="opacity-75">
+                        Call now on 013-5921176 and see how Capital Company can work for
+                        you!
+                    </p>
+                </div>
+
+                <div
+                    class="feature col card border-0 card-hover h-100 text-decoration-none py-4 rounded-5 px-lg-4 card-cover">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#D92A00" class="bi bi-gem"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6l3-4zm11.386 3.785-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495 8 13.366l2.532-7.876-5.062.005zm-1.371-.999-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l5.113 6.817-2.192-6.82L1.5 5.5zm7.889 6.817 5.123-6.83-2.928.002-2.195 6.828z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-shadow-1">our values</h4>
+                    <p class="opacity-75">
+                        Transparency, honesty, and responsibility towards our customers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Link carouselExampleAutoplaying   carouselExampleAutoplaying  slides to any content via binded-content -->
+
+    <section class="object-fit-cover overflow-hidden">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-jarallax data-type="scroll-opacity" data-speed="0.7">
+                    <span class="position-absolute top-0 start-0 w-100 bg-dark opacity-50 zindex-2"></span>
+                    <img src="./img/premium_photo-1661963130783-230270d66f76.avif" alt="" width="100%" height="480px"
+                        class="object-fit-cover" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                        focusable="false" />
+                    <div class="container">
+                        <div class="carousel-caption text-start position-absolute top-0">
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <h1 class="text-danger">Capital workshop.</h1>
+                            <p class="fw-semibold">
+                                DC provides fabrication, welding, mechanical and hydraulic
+                                services, and our work <br />
+                                includes repair services, as well as custom manufacturing,
+                                <br />
+                                or manufacturing of new components. We are able to deal
+                            </p>
+                            <p>
+                                <a class="btn btn-outline-light fw-semibold" href="./aboutus.html">Sign up today</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-jarallax data-type="scroll-opacity" data-speed="0.7">
+                    <img src="./img/photo-1429772011165-0c2e054367b8.avif" alt="" width="100%" height="480px"
+                        class="object-fit-cover" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                        focusable="false" />
+                    <div class="container">
+                        <div class="carousel-caption text-start position-absolute top-0">
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <h1 class="text-danger">Capital workshop.</h1>
+                            <p class="fw-semibold">
+                                DC provides fabrication, welding, mechanical and hydraulic
+                                services, and our work <br />
+                                includes repair services, as well as custom manufacturing,
+                                <br />
+                                or manufacturing of new components. We are able to deal
+                            </p>
+                            <p>
+                                <a class="btn btn-outline-light fw-semibold" href="./aboutus.html">Sign up today</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-jarallax data-type="scroll-opacity" data-speed="0.7">
+                    <img src="./img/photo-1504917595217-d4dc5ebe6122.avif" alt="" width="100%" height="480px"
+                        class="object-fit-cover" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                        focusable="false" />
+                    <div class="container">
+                        <div class="carousel-caption text-start position-absolute top-0">
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <h1 class="text-danger">Capital workshop.</h1>
+                            <p class="fw-semibold">
+                                DC provides fabrication, welding, mechanical and hydraulic
+                                services, and our work <br />
+                                includes repair services, as well as custom manufacturing,
+                                <br />
+                                or manufacturing of new components. We are able to deal
+                            </p>
+                            <p>
+                                <a class="btn btn-outline-light fw-semibold" href="./aboutus.html">Sign up today</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-black rounded-circle" aria-hidden="true"
+                    style="height: 50px; width: 40px;"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-black rounded-circle" aria-hidden="true"
+                    style="height: 50px; width: 40px;"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- Link carouselExampleAutoplaying   carouselExampleAutoplaying  slides to any content via binded-content -->
+    <!-- Blog------------------------------->
+    <!-- Blog-------------------------------->
+
+    <br />
+    <br />
+
+
+    <section>
+        <div class="container-xl py-5" onscroll="move()">
+            <h3 class="text-start text-danger fw-semibold">
+                The level of work completion
+            </h3>
+            <br />
+            <div class="progress" role="progressbar" aria-label="Animated  Danger  striped example" aria-valuenow="95"
+                aria-valuemin="0" aria-valuemax="100" style="height: 30px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated fw-semibold" style="width: 95%;">
+                    90%
+                </div>
+            </div>
+            <br />
+        </div>
+    </section>
+    <br />
+    <br />
+    <section>
+        <div class="container-xl text-center py-5">
+            <div class="row align-items-center">
+                <div class="col-12  col-md-9">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.683902696939!2d49.47565437512143!3d25.415389422828977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e37a265c1b1a329%3A0xa5d8cbe47a9c87ff!2z2KfZhNmB2K3YtSDYp9mE2K_ZiNix2Yog2YTZhNiz2YrYp9ix2KfYqiDZiNin2YTZhdix2YPYqNin2KogLSBNb3RvciBWZWhpY2xlIFBlcmlvZGljIEluc3BlY3Rpb24!5e0!3m2!1sen!2seg!4v1698907051381!5m2!1sen!2seg"
+                        style="height: 300px;" allowfullscreen="" loading="lazy"
+                        class="w-100 overflow-hidden object-fit-cover"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-12 col-md-3 pt-3  pt-md-0">
+                    <h6 class="text-black fw-semibold text-md-start">
+                        Head Office, Al-Ahsa Industrial Zone
+                    </h6>
+
+                    <ul class="nav flex-column text-md-start">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary">Abqaiq Branch In the industrial area</a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary opacity-75">info@alaasemh.com</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary opacity-75">gm@alaasemh.com</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary opacity-75"><i style="font-size:20px"
+                                    class="fa px-1">&#xf095;</i>0135930528</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary opacity-75"><i style="font-size:20px"
+                                    class="fa px-1">&#xf095;</i>0135930528</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
+    <section class="py-1 bg-black">
+        <div class="container">
+            <footer class=" ">
+                <ul class="nav justify-content-end pb-3 mt-3">
+                    <li class="nav-item">
+                        <a href="./home.html" class="nav-link px-2 text-light">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./aboutus.html" class="nav-link px-2 text-light">about us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./manfactu.html" class="nav-link px-2 text-light">our services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./customer.html" class="nav-link px-2 text-light">our customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link px-2 text-light">contact</a>
+                    </li>
+                </ul>
+                <hr />
+                <ul class="nav justify-content-start">
+                    <li class="nav-item">
+                        <a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size: 24px;" class="fa">&#xf16a;</i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size: 24px;" class="fa">&#xf082;</i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size: 24px;" class="fa">&#xf099;</i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text-start text-light">&copy; 2023 Company, Inc</p>
+            </footer>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Jarallax JS: Optional video extension -->
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js"></script>
+    <script src="./bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

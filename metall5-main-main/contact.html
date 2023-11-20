@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>&#8211; شركة العاصمة</title>
+        <meta name="description" content="شركة العاصمة">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" id="google-font" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Page loading styles-->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all 0.4s 0.2s ease-in-out;
+            transition: all 0.4s 0.2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+
+        .dark-mode .page-loading {
+            background-color: #121519;
+        }
+
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
+            opacity: 0;
+        }
+
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+
+        .page-loading-inner>span {
+            display: block;
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #6f788b;
+        }
+
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: 0.6;
+        }
+
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: 0.75rem;
+            vertical-align: text-bottom;
+            background-color: #d7dde2;
+            border-radius: 50%;
+            opacity: 0;
+            -webkit-animation: spinner 0.75s linear infinite;
+            animation: spinner 0.75s linear infinite;
+        }
+
+        .dark-mode .page-spinner {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        @-webkit-keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector(".page-loading");
+                preloader.classList.remove("active");
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1500);
+            };
+        })();
+    </script>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                "gtm.start": new Date().getTime(),
+                event: "gtm.js",
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-WKV3GT5");
+    </script>
+    <meta name="theme-color" content="#712cf9" />
+</head>
+
+<body class="bg-secondary">
+    <!-- <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0"
+            style="display: none; visibility: hidden;"></iframe>
+    </noscript> -->
+    <!-- Page loading spinner-->
+    <!-- <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div> -->
+
+
+    <header class="">
+        <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top z-2">
+            <div class="container-xxl">
+                <a class="navbar-brand fw-bold" href="./home.html">
+                    <img class="object-fit-cover " src="./img/Un-1.png" alt="icon img/Un-1.png"
+                        style="width: 150px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-xl-5">
+                        <li class="nav-item">
+                            <a class="nav-link ps-lg-5 COLOR1" aria-current="page" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-lg-3 COLOR1" aria-current="page" href="./aboutus.html">about us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle ps-lg-3 COLOR1" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Our services
+                            </a>
+                            <ul class="dropdown-menu" data-bs-theme="light">
+                                <li>
+                                    <a class="dropdown-item COLOR1 ps-md-3" href="./turing.html">Turning Department
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item COLOR1 ps-md-3" href="./heavy.html">Heavy Equipment
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item COLOR1 ps-md-3" href="./pumps.html">Pumps department
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item COLOR1 ps-md-3" href="./welding.html">Welding department
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item COLOR1 ps-md-3" href="./manfactu.html">Manufacturing
+                                        department</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-lg-3 COLOR1" aria-current="page" href="./customer.html">Our customers
+                            </a>
+                        </li>
+                    </ul>
+
+                    <form class="" role="search">
+                        <a href="./home.html" type="button" class="btn px-0">
+                            <img src="./img/uk_4628638.png" alt="img/uk_4628638.png" style="width: 25px;">
+                        </a>
+                        <a href="./homear.html" type="button" class="btn px-0">
+                            <img src="./img/saudi-arabia_5111777.png" alt="img/uk_4628638.png" style="width: 25px;">
+                        </a>
+                        <a type="button" href="./contact.html"
+                            class="btn btn-outline-secondary pt-1 fw-semibold  rounded-5">
+                            contact
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br />
+
+
+    <br />
+    <br />
+
+
+    <br />
+
+
+    <br />
+    <br />
+
+
+    <br />
+    <!-- Image zoom effect on hover. Can be combined with other effects like content overlay and lift. -->
+
+
+
+    <section class="container-xxl">
+        <h1 class="display-2 fw-semibold">Contacts</h1>
+        <p class="fs-lg pb-4 mb-2 fw-semibold h5 pt-3 text-dark mb-sm-3">Get in touch with us by completing the
+            below form or call us now</p>
+        <!-- Details cards-->
+    </section>
+  
+    <section class="container dark-mode" >
+        <div class="card border-0  position-relative py-lg-2 py-xl-2 rounded-5 shadow-sm">
+            <!-- Decorative shapes-->
+            <svg class="position-absolute end-0 mt-n2" width="242" height="331" viewBox="0 0 242 331" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M172.014 250.127C137.236 227.74 112.349 192.144 144.586 153.591C157.686 137.932 176.759 127.973 196.524 122.046C234.647 110.639 277.027 113.361 313.349 129.576C338.19 140.666 361.129 159.183 369.934 184.502C383.476 223.496 359.75 260.161 321.569 273.118C288.832 284.223 247.685 279.513 214.885 269.837C201.003 265.743 185.745 258.966 172.014 250.127Z"
+                    fill="#121519" fill-opacity=".07"></path>
+                <path
+                    d="M20.3265 69.264C19.7064 43.0736 29.8071 17.1878 62.3851 19.8622C75.6229 20.9505 87.9525 27.2066 98.3563 35.3132C118.426 50.9253 132.424 73.896 136.952 98.6413C140.044 115.562 138.424 134.218 127.978 148C111.901 169.236 83.4531 170.283 62.5246 155.209C44.5807 142.281 32.0983 119.217 25.3391 98.6799C22.4836 89.9885 20.5616 79.6021 20.3265 69.264Z"
+                    fill="#121519" fill-opacity=".07"></path>
+            </svg>
+            <svg class="position-absolute start-0 bottom-0 ms-3" width="169" height="217" viewBox="0 0 169 217"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M34.2574 90.0177C29.666 97.6253 26.6254 106.591 24.9502 114.96C19.9522 140.043 26.4112 168.792 49.6162 181.885C66.0705 191.17 91.0017 189.904 108.062 183.692C125.725 177.266 135.045 168.04 142.29 150.389C151.409 128.174 150.912 99.6904 125.93 91.6429C115.423 88.254 104.723 86.5065 94.2249 82.5889C84.6622 79.0248 74.8545 72.1766 64.4411 71.6149C50.8011 70.8777 40.9122 79.0146 34.2574 90.0177Z"
+                    fill="#121519" fill-opacity="0.07"></path>
+                <path
+                    d="M147.005 75.6331C152.135 70.7783 156.106 64.2374 159.153 57.9073C166.014 43.6372 174.127 22.1368 160.207 9.68505C152.924 3.17188 139.243 3.86644 130.324 5.29774C118.428 7.20428 107.295 8.85077 96.5031 14.783C85.8056 20.6599 79.0155 33.6997 77.0014 45.6686C75.4978 54.5776 79.63 63.6672 84.7391 70.7453C91.8208 80.5571 103.503 84.2003 114.817 84.3975C121.101 84.5081 127.716 84.0527 133.89 82.8121C138.932 81.7962 143.273 79.1597 147.005 75.6331Z"
+                    fill="#121519" fill-opacity="0.07"></path>
+            </svg>
+            <div class="card-body position-relative zindex-2 py-5">
+                <form class="mx-auto" style="max-width: 800px;">
+                    <h2 class="h1 card-title text-center pb-4">Get a free consultation</h2>
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <label class="form-label fs-base" for="name">Name</label>
+                            <input class="form-control form-control-lg" type="text" placeholder="Your name" required
+                                id="name">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label fs-base" for="company">Company</label>
+                            <input class="form-control form-control-lg" type="text" placeholder="Your company name"
+                                id="company">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label fs-base" for="email">Email</label>
+                            <input class="form-control form-control-lg" type="email" placeholder="Email address"
+                                required id="email">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label fs-base" for="phone">Phone</label>
+                            <input class="form-control form-control-lg" type="text" placeholder="Phone number"
+                                id="phone">
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="form-label fs-base" for="message">How can we help?</label>
+                            <textarea class="form-control form-control-lg" rows="6"
+                                placeholder="Enter your message here..." required id="message"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="seo">
+                                <label class="form-check-label fs-base" for="seo">SEO Website Audit</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="email-marketing" checked>
+                                <label class="form-check-label fs-base" for="email-marketing">Email Marketing</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="social">
+                                <label class="form-check-label fs-base" for="social">Social Networks</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="content-marketing">
+                                <label class="form-check-label fs-base" for="content-marketing">Content
+                                    Marketing</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 text-center pt-4">
+                            <button class="btn btn-lg btn-dark" type="submit">Send a request</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Link carouselExampleAutoplaying   carouselExampleAutoplaying  slides to any content via binded-content -->
+
+
+  
+    <section>
+        <div class="container-xl text-center py-5">
+            <div class="row align-items-center">
+                <div class="col-12  col-md-9">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.683902696939!2d49.47565437512143!3d25.415389422828977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e37a265c1b1a329%3A0xa5d8cbe47a9c87ff!2z2KfZhNmB2K3YtSDYp9mE2K_ZiNix2Yog2YTZhNiz2YrYp9ix2KfYqiDZiNin2YTZhdix2YPYqNin2KogLSBNb3RvciBWZWhpY2xlIFBlcmlvZGljIEluc3BlY3Rpb24!5e0!3m2!1sen!2seg!4v1698907051381!5m2!1sen!2seg"
+                        style="height: 300px;" allowfullscreen="" loading="lazy"
+                        class="w-100 overflow-hidden object-fit-cover"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-12 col-md-3 pt-3  pt-md-0">
+                    <h6 class="text-black fw-semibold text-md-start">
+                        Head Office, Al-Ahsa Industrial Zone
+                    </h6>
+
+                    <ul class="nav flex-column text-md-start">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-secondary">Abqaiq Branch In the industrial area</a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary opacity-75">info@alaasemh.com</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary opacity-75">gm@alaasemh.com</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary opacity-75"><i style="font-size:20px"
+                                    class="fa px-1">&#xf095;</i>0135930528</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary opacity-75"><i style="font-size:20px"
+                                    class="fa px-1">&#xf095;</i>0135930528</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
+    <section class="py-1 bg-black">
+        <div class="container">
+            <footer class=" ">
+                <ul class="nav justify-content-end pb-3 mt-3">
+                    <li class="nav-item">
+                        <a href="./home.html" class="nav-link px-2 text-light">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./aboutus.html" class="nav-link px-2 text-light">about us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./manfactu.html" class="nav-link px-2 text-light">our services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./customer.html" class="nav-link px-2 text-light">our customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link px-2 text-light">contact</a>
+                    </li>
+                </ul>
+                <hr />
+                <ul class="nav justify-content-start">
+                    <li class="nav-item">
+                        <a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size: 24px;" class="fa">&#xf16a;</i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size: 24px;" class="fa">&#xf082;</i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size: 24px;" class="fa">&#xf099;</i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text-start text-light">&copy; 2023 Company, Inc</p>
+            </footer>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Jarallax JS: Optional video extension -->
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js"></script>
+    <script src="./bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

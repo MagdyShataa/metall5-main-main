@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-bs-theme="auto">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>&#8211; شركة العاصمة</title>
+    <meta name="description" content="شركة العاصمة">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@200;200;300;400;500&family=Open+Sans:ital,wght@0,700;0,800;2,400;2,500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./stylear.css">
+
+
+    <!-- Page loading styles-->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+
+        .dark-mode .page-loading {
+            background-color: #121519;
+        }
+
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+
+        .page-loading-inner>span {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #6f788b;
+        }
+
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: .6;
+        }
+
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            background-color: #d7dde2;
+            border-radius: 50%;
+            opacity: 0;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+
+        .dark-mode .page-spinner {
+            background-color: rgba(255, 255, 255, .25);
+        }
+
+        @-webkit-keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1500);
+            };
+        })();
+
+    </script>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WKV3GT5');
+    </script>
+    <meta name="theme-color" content="#712cf9">
+
+</head>
+
+<body>
+
+    <!-- <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0"
+            style="display: none; visibility: hidden;"></iframe>
+    </noscript> -->
+    <!-- Page loading spinner-->
+    <!-- <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div> -->
+
+
+
+
+    <header class="">
+        <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top z-2">
+            <div class="container-xxl">
+                <a class="navbar-brand fw-bold" href="./homear.html">
+                    <img src="./img/Un-1.png" alt="icon img/Un-1.png" style="width: 150px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ps-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link  pe-lg-5    COLOR2" aria-current="page" href="./homear.html"> الرئيسية
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link   pe-lg-3  COLOR2" aria-current="page" href="./aboutar.html">من نحن </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle    pe-lg-3  COLOR2" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                خدماتنا
+                            </a>
+                            <ul class="dropdown-menu" data-bs-theme="light">
+                                <li><a class="dropdown-item COLOR2  pe-md-3  " href="./turinger.html"> قسم الخراطة</a>
+                                </li>
+                                <li><a class="dropdown-item COLOR2 pe-md-3 " href="./heavyar.html"> خراطة المعدات
+                                        الثقيل</a>
+                                </li>
+                                <li><a class="dropdown-item COLOR2  pe-md-3" href="./pumpsar.html">قسم الطلمبات</a></li>
+                                <li><a class="dropdown-item COLOR2  pe-md-3 " href="./weldingar.html"> قسم اللحام </a>
+                                </li>
+
+                                <li><a class="dropdown-item COLOR2  pe-md-3 " href="./manufactar.html">قسم التصنيع</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link   pe-lg-3   COLOR2 " aria-current="page" href="./customerar.html">عملائنا
+                            </a>
+                        </li>
+                    </ul>
+
+                    <form class="" role="search">
+                        <a href="./home.html" type="button" class="btn px-0">
+                            <img src="./img/uk_4628638.png" alt="img/uk_4628638.png" style="width: 25px;">
+                        </a>
+                        <a href="./homear.html" type="button" class="btn px-0">
+                            <img src="./img/saudi-arabia_5111777.png" alt="img/uk_4628638.png" style="width: 25px;">
+                        </a>
+                        <a type="button" href="./contact.html"
+                            class="btn btn-outline-secondary pt-1 fw-semibold  rounded-5">
+                            contact
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+    <section class="container-xxl">
+        <h1 class="display-2 fw-semibold"> خدماتنا </h1>
+        <p class="fs-lg pb-2 mb-2 fw-semibold h5 pt-3 pb-5 text-dark-emphasis mb-sm-3"> تقديم أفضل الخدمات والمنتجات ذات
+            جودة عالية. </p>
+
+    </section>
+    <!-- Image zoom effect on hover. Can be combined with other effects like content overlay and lift. -->
+    <!-- Image zoom effect on hover. Can be combined with other effects like content overlay and lift. -->
+    <section class="container-xxl text-center ">
+        <div class="card mb-3 border-0">
+            <div class="row text-center   g-0">
+                <div class="col-md-6 mt-2" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                    data-aos-offset="300">
+                    <img src="./img/serves/photo-1593284332929-31828896355d.avif"
+                        class="img-fluid  w-100 rounded-5  border-0 object-fit-cover shadow-sm"
+                        alt="img/serves/photo-1562052579-b30d05e1ec93.avif" style="height: 320px;">
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1400" data-aos-easing="linear"
+                    data-aos-offset="300">
+                    <div class="card-body pt-3">
+                        <h3 class="text-end">قسم خراطة المعدات الثقيلة </h3>
+
+                        <h5 class="text-end pt-2 card-text text-body-secondary lh-base">
+
+                            تتخصص العاصمة لإصلاح المعدات الثقيلة من حيث إعادة بناء وتعديل وإصلاح المعدات الثقيلة ومعدات
+                            البناء ، وكسارات الصخور ، ومعدات صيانة السكك الحديدية ، براميل ونش التجريف ، ورافعات
+                            Pettibone ، إلخ. أيضًا، نحن قادرون على التعامل مع المشروعات الصناعية الكبيرة التي تحتاج إلى
+                            تصنيع أو لحام. لقد خدمنا مجموعة متنوعة من الصناعات في مشاريع تتراوح من البسيطة إلى المعقدة.
+
+                        </h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Image zoom effect on hover. Can be combined with other effects like content overlay and lift. -->
+    <!-- Image zoom effect on hover. Can be combined with other effects like content overlay and lift. -->
+    <section class="container-xxl ">
+        <div class="card mb-3 border-0">
+            <div class="row text-center my-md-2  mt-3 mt-md-2 py-2 pt-2 pt-md-5  g-0">
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1400" data-aos-easing="linear"
+                    data-aos-offset="200">
+                    <div class="card-body">
+                        <ul class=" text-end list-unstyled lh-base">
+                            <li class="h4">تشمل الخدمات التي نقدمها لعملائنا ما يلي: </li>
+                            <li class="h5 text-body-secondary  pt-2">- صيانة ميكانيكية شاملة (تعبئة)
+                            </li>
+                            <li class="h5 text-body-secondary ">- إصلاح الأسطوانات الهيدروليكية وتصنيعها حسب الطلب</li>
+                            <li class="h5 text-body-secondary ">- إصلاح معدات الحفر والتعدين والتصنيع
+                                الخدمات </li>
+                            <li class="h5 text-body-secondary ">-إصلاح مكونات المعدات</li>
+                            <li class="h5 text-body-secondary  ">- قص المفاتيح</li>
+                            <li class="h5 text-body-secondary ">-تعديل الجهاز </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear"
+                    data-aos-offset="220">
+                    <img src="./img/serves/unnamed.jpg" class="img-fluid  w-100 rounded-5  border-0 object-fit-cover"
+                        alt="img/serves/photo-1562052579-b30d05e1ec93.avif" style="height: 330px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Image zoom effect on hover. Can be combined with other effects like content overlay and lift. -->
+    <!-- Image zoom effect on hover. Can be combined with other effects like content overlay and lift. -->
+
+
+    <br>
+    <br>
+ 
+
+
+
+
+
+
+
+
+
+    <br>
+    <section class="text-center">
+        <div class="container-xl text-center py-md-5">
+
+            <div class="row   text-center ">
+
+                <div class="col-12 text-center mx-auto  col-md-3">
+                    <h5 class="text-black fw-semibold  text-md-end">المركز الرئيسي </h5>
+                    <h5 class="text-black fw-semibold text-md-end">- المنطقة الصناعية بالاحساء </h5>
+
+                    <ul class="nav flex-column  mx-0 px-0">
+                        <li class="nav-item mb-2 text-md-end"><a href="#" class="nav-link p-0 text-secondary ">- فرع
+                                ابقيق
+                                بالمنطقة الصناعية </a></li>
+                        <li class="nav-item mb-2 text-md-end "><a href="#"
+                                class="nav-link p-0 text-body-secondary opacity-75 fw-semibold">-info@alaasemh.com</a>
+                        </li>
+                        <li class="nav-item mb-2 text-md-end "><a href="#"
+                                class="nav-link p-0 text-body-secondary opacity-75 fw-semibold">-gm@alaasemh.com</a>
+                        </li>
+                        <li class="nav-item mb-2 text-md-end"><a href="#"
+                                class="nav-link p-0 text-body-secondary opacity-75 "><i style="font-size:18px"
+                                    class="fa fw-bold">&#xf095;</i> 0135930528</a>
+                        </li>
+                        <li class="nav-item mb-2  text-md-end"><a href="#"
+                                class="nav-link p-0 text-body-secondary  opacity-75"><i style="font-size:18px"
+                                    class="fa fw-bold">&#xf095;</i> 0135921176</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12   col-md-9 ">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.683902696939!2d49.47565437512143!3d25.415389422828977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e37a265c1b1a329%3A0xa5d8cbe47a9c87ff!2z2KfZhNmB2K3YtSDYp9mE2K_ZiNix2Yog2YTZhNiz2YrYp9ix2KfYqiDZiNin2YTZhdix2YPYqNin2KogLSBNb3RvciBWZWhpY2xlIFBlcmlvZGljIEluc3BlY3Rpb24!5e0!3m2!1sen!2seg!4v1698907051381!5m2!1sen!2seg"
+                        style="height: 300px;" allowfullscreen="" loading="lazy"
+                        class=" w-100 overflow-hidden object-fit-cover"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <section class=" py-1 bg-black">
+        <div class="container">
+            <footer class=" ">
+                <ul class="nav justify-content-sm-start pb-3 mt-3">
+                    <li class="nav-item"><a href="./homear.html" class="nav-link px-2 text-light">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item"><a href="./aboutar.html" class="nav-link px-2 text-light">نبذة عنا</a></li>
+                    <li class="nav-item"><a href="./manufactar.html" class="nav-link px-2 text-light">خدماتنا</a></li>
+                    <li class="nav-item"><a href="./customerar.html" class="nav-link px-2 text-light">عملاؤنا</a></li>
+                    <li class="nav-item"><a href="./contactar.html" class="nav-link px-2 text-light">جهة الاتصال</a>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="nav justify-content-start  ">
+                    <li class="nav-item"><a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size:24px" class="fa">&#xf16a;</i>
+                        </a></li>
+                    <li class="nav-item"><a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size:24px" class="fa">&#xf082;</i>
+
+                        </a></li>
+                    <li class="nav-item"><a href="https://quran.com/en/al-kahf" class="nav-link px-2 text-light">
+                            <i style="font-size:24px" class="fa">&#xf099;</i>
+                        </a></li>
+
+                </ul>
+                <p class="text-start text-light">&copy; 2023 Company, Inc</p>
+            </footer>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+
+    <!-- Jarallax JS: Optional video extension -->
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js"></script>
+    <script src="./bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./node_modules/aos/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
